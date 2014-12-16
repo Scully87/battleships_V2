@@ -10,4 +10,9 @@ describe 'Ship' do
 		end
 	end
 
+	it 'can be hit' do
+		ship.hit!
+		expect(ship.hits).to eq 1
+	end
+
 end
