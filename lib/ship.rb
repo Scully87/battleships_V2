@@ -11,4 +11,8 @@ class Ship
 		self.hits += 1
 	end
 
+	def sunk?
+		@size == @hits
+	end
+
 end

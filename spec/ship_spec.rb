@@ -15,4 +15,9 @@ describe 'Ship' do
 		expect(ship.hits).to eq 1
 	end
 
+	it 'can be sunk' do
+		ship.hit!
+		expect(ship).to be_sunk
+	end
+
 end
