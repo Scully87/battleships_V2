@@ -24,6 +24,11 @@ describe 'Ship' do
 		expect(ship).to be_sunk
 	end
 
+	it "is not floating" do 
+		ship.hit!
+		expect(ship).not_to be_floating
+	end
+
 	it "can create an Aircraft carrier" do 
 		ac = Ship.aircraft_carrier
 		expect(ac.size).to eq 5
