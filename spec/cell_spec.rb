@@ -9,4 +9,9 @@ describe Cell do
 		expect(cell.content).to eq content
 	end
 
+	it "can shoot it's content" do
+		expect(content).to receive(:hit!)
+		cell.shoot
+	end
+
 end
