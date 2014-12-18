@@ -15,6 +15,10 @@ class Ship
 		@size == @hits
 	end
 
+	def floating?
+		!sunk?
+	end
+
 	def self.aircraft_carrier
 		new 5
 	end

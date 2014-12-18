@@ -15,6 +15,10 @@ describe 'Ship' do
 		expect(ship.hits).to eq 1
 	end
 
+	it "is floating" do
+		expect(ship).to be_floating
+	end
+
 	it 'can be sunk' do
 		ship.hit!
 		expect(ship).to be_sunk
@@ -34,7 +38,7 @@ describe 'Ship' do
 		sb = Ship.submarine
 		expect(sb.size).to eq 3
 	end
-	
+
 	it "can create a Patrol ship" do
 		pb = Ship.patrol_boat
 		expect(pb.size).to eq 2
