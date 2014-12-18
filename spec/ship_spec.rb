@@ -20,4 +20,26 @@ describe 'Ship' do
 		expect(ship).to be_sunk
 	end
 
+	it "can create an Aircraft carrier" do 
+		ac = Ship.aircraft_carrier
+		expect(ac.size).to eq 5
+	end
+
+	it "can create a Battle ship" do
+		bs = Ship.battleship
+		expect(bs.size).to eq 4
+	end
+
+	it "can create a Submarine" do
+		sb = Ship.submarine
+		expect(sb.size).to eq 3
+	end
+	
+	it "can create a Patrol ship" do
+		pb = Ship.patrol_boat
+		expect(pb.size).to eq 2
+	end
+
+
+
 end
