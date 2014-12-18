@@ -1,11 +1,11 @@
 require 'water'
 
-describe 'water' do
-
-	xit 'can be hit' do
-		water = Water.new
-		water.hit!
-		expect(water).to be_hit!
-	end
+	describe Water do
+		let(:water){Water.new}
+		
+		it "can be hit" do
+			water.hit!
+			expect(water).to be_hit
+		end
 
 end
